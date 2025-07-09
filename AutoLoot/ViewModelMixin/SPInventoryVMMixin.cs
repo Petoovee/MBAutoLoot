@@ -1,8 +1,10 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Bannerlord.UIExtenderEx.Attributes;
 using Bannerlord.UIExtenderEx.ViewModels;
 using TaleWorlds.CampaignSystem.Inventory;
 using TaleWorlds.CampaignSystem.ViewModelCollection.Inventory;
+using TaleWorlds.Library;
 
 namespace AutoLoot.ViewModelMixin
 {
@@ -44,13 +46,27 @@ namespace AutoLoot.ViewModelMixin
                     foreach (var item in leftPanel)
                         if (item.IsTransferable)
                         {
-                            int itemType = item.TypeId;
-                            //int itemCost = inventoryLogic.GetCostOfItemRosterElement(item.ItemRosterElement, InventoryLogic.InventorySide.OtherInventory);
-                            
-                            if (DonatableItemEnums.armorItemTypes.Contains(itemType))
+                            var itemType = item.TypeId;
+                            var itemCost = inventoryLogic.GetCostOfItemRosterElement(item.ItemRosterElement,
+                                InventoryLogic.InventorySide.OtherInventory);
+                            var itemTier =
+                                Math.Max(
+                                    Math.Min((int)Math.Round(item.ItemRosterElement.EquipmentElement.Item.Tierf), 6),
+                                    0);
+
+                            InformationManager.DisplayMessage(
+                                new InformationMessage(
+                                    $"Item: {item.ItemRosterElement.EquipmentElement.Item.Name}, Cost: {itemCost}, Tier: {itemTier}",
+                                    Colors.Green
+                                )
+                            );
+
+                            if (DonatableItemEnums.armorItemTypes.Contains(itemType)
+                                && itemCost < armorsMinimumValues[itemTier])
                                 continue; // Skip armors below minimum value
-                            
-                            if (DonatableItemEnums.weaponItemTypes.Contains(itemType))
+
+                            if (DonatableItemEnums.weaponItemTypes.Contains(itemType)
+                                && itemCost < weaponsMinimumValues[itemTier])
                                 continue; // Skip weapons below minimum value
 
                             // Move the item to the player inventory using the inventory logic
@@ -63,7 +79,7 @@ namespace AutoLoot.ViewModelMixin
                                     item.ItemType,
                                     item.ItemType,
                                     inventoryLogic.InitialEquipmentCharacter,
-                                    !inventory.IsInWarSet
+                                    item.IsCivilianItem
                                 )
                             );
                         }
