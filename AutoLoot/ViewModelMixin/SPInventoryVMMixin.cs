@@ -54,13 +54,6 @@ namespace AutoLoot.ViewModelMixin
                                     Math.Min((int)Math.Round(item.ItemRosterElement.EquipmentElement.Item.Tierf), 6),
                                     0);
 
-                            InformationManager.DisplayMessage(
-                                new InformationMessage(
-                                    $"Item: {item.ItemRosterElement.EquipmentElement.Item.Name}, Cost: {itemCost}, Tier: {itemTier}",
-                                    Colors.Green
-                                )
-                            );
-
                             if (DonatableItemEnums.armorItemTypes.Contains(itemType)
                                 && itemCost < armorsMinimumValues[itemTier])
                                 continue; // Skip armors below minimum value
