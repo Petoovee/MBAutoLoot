@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Module>
+    <Name value="Auto Loot"/>
+    <Id value="AutoLoot"/>
+    <Version value="v1.2.12.3"/>
+    <SingleplayerModule value="true"/>
+    <MultiplayerModule value="false"/>
+    <DependedModules>
+        <DependedModule Id="Native"/>
+        <DependedModule Id="SandBoxCore"/>
+        <DependedModule Id="Sandbox"/>
+        <DependedModule Id="CustomBattle"/>
+        <DependedModule Id="StoryMode"/>
+        <DependedModule Id="Bannerlord.Harmony"/>
+    </DependedModules>
+    <SubModules>
+        <SubModule>
+            <Name value="AutoLoot"/>
+            <DLLName value="AutoLoot.dll"/>
+            <SubModuleClassType value="AutoLoot.SubModule"/>
+            <Tags>
+                <Tag key="DedicatedServerType" value="none"/>
+                <Tag key="IsNoRenderModeElement" value="false"/>
+            </Tags>
+        </SubModule>
+    </SubModules>
+
+    <Xmls/>
+</Module>

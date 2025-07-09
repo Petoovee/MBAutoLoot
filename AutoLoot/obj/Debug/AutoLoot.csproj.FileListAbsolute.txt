@@ -1,0 +1,6 @@
+/home/petoovee/.local/share/Steam/steamapps/common/Mount & Blade II Bannerlord/Modules/AutoLoot/bin/Win64_Shipping_Client/AutoLoot.dll
+/home/petoovee/.local/share/Steam/steamapps/common/Mount & Blade II Bannerlord/Modules/AutoLoot/bin/Win64_Shipping_Client/AutoLoot.pdb
+/home/petoovee/Documents/Programmering/C-sharp/MBAutoLoot/AutoLoot/obj/Debug/AutoLoot.csproj.AssemblyReference.cache
+/home/petoovee/Documents/Programmering/C-sharp/MBAutoLoot/AutoLoot/obj/Debug/AutoLoot.csproj.CoreCompileInputs.cache
+/home/petoovee/Documents/Programmering/C-sharp/MBAutoLoot/AutoLoot/obj/Debug/AutoLoot.dll
+/home/petoovee/Documents/Programmering/C-sharp/MBAutoLoot/AutoLoot/obj/Debug/AutoLoot.pdb

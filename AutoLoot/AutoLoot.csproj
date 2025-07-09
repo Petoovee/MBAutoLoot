@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{D4352A80-D473-41BE-A96C-289C9FB2D162}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>AutoLoot</RootNamespace>
+        <AssemblyName>AutoLoot</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <Deterministic>true</Deterministic>
+        <LangVersion>9</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>\home\petoovee\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\AutoLoot\bin\Win64_Shipping_Client\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>\home\petoovee\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\AutoLoot\bin\Win64_Shipping_Client\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\workshop\content\261550\2859188632\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="MCMv5">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\workshop\content\261550\2859238197\bin\Win64_Shipping_Client\MCMv5.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="SandBox.GauntletUI">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\SandBox\bin\Win64_Shipping_Client\SandBox.GauntletUI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Numerics"/>
+        <Reference Include="System.Numerics.Vectors"/>
+        <Reference Include="System.Runtime.InteropServices.RuntimeInformation"/>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="TaleWorlds.CampaignSystem">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.CampaignSystem.ViewModelCollection">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.CampaignSystem.ViewModelCollection.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Core">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Core.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Core.ViewModelCollection">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Core.ViewModelCollection.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Engine">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Engine.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Engine.GauntletUI">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Engine.GauntletUI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.GauntletUI">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.GauntletUI.Data">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.GauntletUI.Data.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.InputSystem">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.InputSystem.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Library">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Library.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.Localization">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Localization.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.MountAndBlade.GauntletUI.Widgets">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.GauntletUI.Widgets.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.ObjectSystem">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.ObjectSystem.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.SaveSystem">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.SaveSystem.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="TaleWorlds.ScreenSystem">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.ScreenSystem.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Settings.cs"/>
+        <Compile Include="Patches\AutoLootPatch.cs"/>
+        <Compile Include="SubModule.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="ModuleData\SubModule.xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="ModuleData\ModuleData\Languages\"/>
+    </ItemGroup>
+    <ItemGroup>
+        <WCFMetadata Include="Connected Services\"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <PropertyGroup>
+        <PostBuildEvent>cp -r "$(ProjectDir)ModuleData/"* "$(TargetDir)../../"
+        </PostBuildEvent>
+    </PropertyGroup>
+</Project>
