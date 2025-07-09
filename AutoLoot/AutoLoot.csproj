@@ -37,6 +37,10 @@
             <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\workshop\content\261550\2859188632\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
             <Private>False</Private>
         </Reference>
+        <Reference Include="Bannerlord.UIExtenderEx">
+            <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\workshop\content\261550\2859222409\bin\Win64_Shipping_Client\Bannerlord.UIExtenderEx.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
         <Reference Include="MCMv5">
             <HintPath>..\..\..\..\..\.local\share\Steam\steamapps\workshop\content\261550\2859238197\bin\Win64_Shipping_Client\MCMv5.dll</HintPath>
             <Private>False</Private>
@@ -118,8 +122,9 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="DonatableItemEnums.cs"/>
         <Compile Include="Settings.cs"/>
-        <Compile Include="Patches\AutoLootPatch.cs"/>
+        <Compile Include="ViewModelMixin\SPInventoryVMMixin.cs"/>
         <Compile Include="SubModule.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>

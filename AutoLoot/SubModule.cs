@@ -1,6 +1,5 @@
-﻿using HarmonyLib;
+﻿using Bannerlord.UIExtenderEx;
 using TaleWorlds.Core;
-using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
 namespace AutoLoot
@@ -10,10 +9,11 @@ namespace AutoLoot
         protected override void OnSubModuleLoad()
         {
             base.OnSubModuleLoad();
-            var harmony = new Harmony("top.petoovee.patch.autoloot");
-            harmony.PatchAll();
 
-            InformationManager.DisplayMessage(new InformationMessage("AutoLoot Patch Loaded"));
+            var Name = typeof(SubModule).Namespace!;
+            var extender = UIExtender.Create(Name);
+            extender.Register(typeof(SubModule).Assembly);
+            extender.Enable();
         }
 
         protected override void OnApplicationTick(float dt)

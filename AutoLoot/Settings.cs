@@ -14,20 +14,60 @@ namespace AutoLoot
             HintText = "Enable or disable the auto loot feature.")]
         public bool EnableAutoLoot { get; set; } = true;
 
-        [SettingPropertyFloatingInteger("Discard armor - Gold per experience point", 0, 9999,
-            HintText = "Discard armors that have low value compared to the experience points they provide.")]
-        public float DiscardArmorGoldPerExperiencePoint { get; set; } = 0.5f;
+        [SettingPropertyInteger("Armor Minimum Value Tier 0", 0, int.MaxValue,
+            HintText = "Minimum value for tier 0 armors to be considered for auto loot.")]
+        public int ArmorMinimumTier0 { get; set; } = 35;
 
-        [SettingPropertyFloatingInteger("Discard weapons - Gold per experience point", 0, 9999,
-            HintText = "Discard weapons that have low value compared to the experience points they provide.")]
-        public float DiscardWeaponsGoldPerExperiencePoint { get; set; } = 0.5f;
+        [SettingPropertyInteger("Armor Minimum Value Tier 1", 0, int.MaxValue,
+            HintText = "Minimum value for tier 1 armors to be considered for auto loot.")]
+        public int ArmorMinimumTier1 { get; set; } = 75;
 
-        [SettingPropertyBool("Loot All Items", RequireRestart = false,
-            HintText = "Automatically loot all items from defeated enemies.")]
-        public bool LootAllItems { get; set; } = true;
+        [SettingPropertyInteger("Armor Minimum Value Tier 2", 0, int.MaxValue,
+            HintText = "Minimum value for tier 2 armors to be considered for auto loot.")]
+        public int ArmorMinimumTier2 { get; set; } = 150;
 
-        [SettingPropertyBool("Loot Only Valuable Items", RequireRestart = false,
-            HintText = "Only loot items that are considered valuable.")]
-        public bool LootOnlyValuableItems { get; set; } = false;
+        [SettingPropertyInteger("Armor Minimum Value Tier 3", 0, int.MaxValue,
+            HintText = "Minimum value for tier 3 armors to be considered for auto loot.")]
+        public int ArmorMinimumTier3 { get; set; } = 250;
+
+        [SettingPropertyInteger("Armor Minimum Value Tier 4", 0, int.MaxValue,
+            HintText = "Minimum value for tier 4 armors to be considered for auto loot.")]
+        public int ArmorMinimumTier4 { get; set; } = 300;
+
+        [SettingPropertyInteger("Armor Minimum Value Tier 5", 0, int.MaxValue,
+            HintText = "Minimum value for tier 5 armors to be considered for auto loot.")]
+        public int ArmorMinimumTier5 { get; set; } = 300;
+
+        [SettingPropertyInteger("Armor Minimum Value Tier 6", 0, int.MaxValue,
+            HintText = "Minimum value for tier 6 armors to be considered for auto loot.")]
+        public int ArmorMinimumTier6 { get; set; } = 300;
+
+        [SettingPropertyInteger("Weapon Minimum Value Tier 0", 0, int.MaxValue,
+            HintText = "Minimum value for tier 0 weapons to be considered for auto loot.")]
+        public int WeaponMinimumTier0 { get; set; } = 35;
+
+        [SettingPropertyInteger("Weapon Minimum Value Tier 1", 0, int.MaxValue,
+            HintText = "Minimum value for tier 1 weapons to be considered for auto loot.")]
+        public int WeaponMinimumTier1 { get; set; } = 75;
+
+        [SettingPropertyInteger("Weapon Minimum Value Tier 2", 0, int.MaxValue,
+            HintText = "Minimum value for tier 2 weapons to be considered for auto loot.")]
+        public int WeaponMinimumTier2 { get; set; } = 150;
+
+        [SettingPropertyInteger("Weapon Minimum Value Tier 3", 0, int.MaxValue,
+            HintText = "Minimum value for tier 3 weapons to be considered for auto loot.")]
+        public int WeaponMinimumTier3 { get; set; } = 250;
+
+        [SettingPropertyInteger("Weapon Minimum Value Tier 4", 0, int.MaxValue,
+            HintText = "Minimum value for tier 4 weapons to be considered for auto loot.")]
+        public int WeaponMinimumTier4 { get; set; } = 300;
+
+        [SettingPropertyInteger("Weapon Minimum Value Tier 5", 0, int.MaxValue,
+            HintText = "Minimum value for tier 5 weapons to be considered for auto loot.")]
+        public int WeaponMinimumTier5 { get; set; } = 300;
+
+        [SettingPropertyInteger("Weapon Minimum Value Tier 6", 0, int.MaxValue,
+            HintText = "Minimum value for tier 6 weapons to be considered for auto loot.")]
+        public int WeaponMinimumTier6 { get; set; } = 300;
     }
 }
