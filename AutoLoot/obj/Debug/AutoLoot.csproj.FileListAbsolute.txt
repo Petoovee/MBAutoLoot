@@ -6,3 +6,5 @@
 /home/petoovee/Documents/Programmering/C-sharp/MBAutoLoot/AutoLoot/obj/Debug/AutoLoot.pdb
 /games/steamapps/common/Mount & Blade II Bannerlord/Modules/AutoLoot/bin/Win64_Shipping_Client/AutoLoot.dll
 /games/steamapps/common/Mount & Blade II Bannerlord/Modules/AutoLoot/bin/Win64_Shipping_Client/AutoLoot.pdb
+/games/SteamLibrary/steamapps/common/Mount & Blade II Bannerlord/Modules/AutoLoot/bin/Win64_Shipping_Client/AutoLoot.dll
+/games/SteamLibrary/steamapps/common/Mount & Blade II Bannerlord/Modules/AutoLoot/bin/Win64_Shipping_Client/AutoLoot.pdb
